@@ -1,0 +1,25 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to Capcore_Cpt_Deactivator\:\:deactivate\(\) on a separate line has no effect\.$#'
+			identifier: staticMethod.resultUnused
+			count: 1
+			path: capcore-cpt.php
+
+		-
+			message: '#^Property Capcore_Cpt_PostTypes\:\:\$plugin_name is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: includes/class-capcore-cpt-post-types.php
+
+		-
+			message: '#^Property Capcore_Cpt_PostTypes\:\:\$version is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: includes/class-capcore-cpt-post-types.php
+
+		-
+			message: '#^Method Capcore_Cpt_Public\:\:get_editable_layouts\(\) should return array\<string, array\{id\: int, title\: string, type\: string, editUrl\: string\}\> but returns array\<int, array\{id\: int, title\: string, type\: string, editUrl\: string\}\>\.$#'
+			identifier: return.type
+			count: 1
+			path: public/class-capcore-cpt-public.php

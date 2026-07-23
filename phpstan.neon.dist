@@ -1,0 +1,3 @@
+includes:
+    - phpstan/capcore-wordpress.neon
+    - phpstan-baseline.neon

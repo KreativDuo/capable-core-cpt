@@ -1,0 +1,23 @@
+# Canonical source: capcore-shared-ui/phpstan/capcore-wordpress.neon
+# This file is intentionally dependency-neutral. Repository-specific dependencies
+# (for example Elementor) are enabled by the local phpstan.neon.dist.
+parameters:
+    level: 5
+    phpVersion: 80200
+    reportUnmatchedIgnoredErrors: true
+    paths:
+        - %currentWorkingDirectory%
+    excludePaths:
+        analyseAndScan:
+            - %currentWorkingDirectory%/.git/*
+            - %currentWorkingDirectory%/.phpstan/*
+            - %currentWorkingDirectory%/.capcore-sources/*
+            - %currentWorkingDirectory%/vendor/*
+            - %currentWorkingDirectory%/node_modules/*
+            - %currentWorkingDirectory%/build/*
+            - %currentWorkingDirectory%/dist/*
+            - %currentWorkingDirectory%/admin/vendor/*
+            - %currentWorkingDirectory%/public/vendor/*
+            - %currentWorkingDirectory%/includes/advanced-custom-fields/*
+            - '**/*.min.php'
+    tmpDir: %currentWorkingDirectory%/.phpstan/cache

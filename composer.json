@@ -1,0 +1,21 @@
+{
+  "name": "capcore/capcore-cpt",
+  "description": "CapCore WordPress plugin development tooling.",
+  "type": "project",
+  "license": "proprietary",
+  "require-dev": {
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.1",
+    "szepeviktor/phpstan-wordpress": "^2.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "phpstan": "phpstan analyse --configuration=phpstan.neon.dist --memory-limit=2G",
+    "phpstan:baseline": "phpstan analyse --configuration=phpstan.neon.dist --memory-limit=2G --generate-baseline=phpstan-baseline.neon"
+  }
+}
